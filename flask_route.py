@@ -48,10 +48,10 @@ def high_value_addr():
     myList  = []
     for x in y : 
         count = r.hget('address_count',x.decode("utf-8"))    
-        j = {"time":x.decode("utf-8"),"count":count.decode("utf-8")}
+        j = {"address":x.decode("utf-8"),"total_value":count.decode("utf-8")}
         myList.append(j)
     myList.sort(key=sort_count, reverse=True)
     return jsonify(myList)
             
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=3000)
