@@ -2,12 +2,11 @@
  
 #Runs in http://localhost:3000
 
-/transactions_count_per_minute
-   Get the count of bitcoin transaction rate in per minute for last hour
-   
-/show_transactions
-   Show the last 100  transaction.
-   
-/high_value_addr
-   Display the bitcoin addresses which has the most aggregate value in transactions in the last 3 hours.
+**Kafka Consumer**
+
+1. Connected to the bitcoin socket. It Consumes the data from that url and push it to the redis database . 
+
+**Flask**
+
+It contains the rest endpoints where some transaction analysis was performed for different endpoints.
  
